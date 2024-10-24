@@ -77,9 +77,12 @@ parser = argparse.ArgumentParser(
     description='Renders the html for a printable calendar.', 
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--year', type=int, help='The year of the calendar.', default=datetime.now().year + 1)
-parser.add_argument('--region', type=str, help='The region code for the calendar. Mostly used for formating dates.', default="de_DE")
-parser.add_argument('--no-browser', '-nb', action='store_true', help='Don\'t open rendered file in the default browser.')
-parser.add_argument('--output', '-o', type=str, help='Output file of the rendering containing the calendar.', default='renderedhtml.html')
+parser.add_argument('--region', type=str, help="The region code for the calendar. " +\
+    "Mostly used for formatting dates.", default="de_DE")
+parser.add_argument('--no-browser', '-nb', action='store_true', \
+    help="Don't open rendered file in the default browser.")
+parser.add_argument('--output', '-o', type=str, \
+    help="Output file of the rendering containing the calendar.", default='renderedhtml.html')
 
 args = parser.parse_args()
 

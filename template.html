@@ -79,7 +79,11 @@
                     <p></p>
                     <hr />
                     {% for month in month_names %}
+                    {% if month == seite.monat %}<span class="highlight">
+                    <p><a href="#{{month}}">{{month[0:3]}}</a></p></span>
+                    {% else %}
                     <p><a href="#{{month}}">{{month[0:3]}}</a></p>
+                    {% endif %}
                     <hr />
                     {% endfor %}
                     <p></p>
